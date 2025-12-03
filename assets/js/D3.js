@@ -128,7 +128,7 @@ console.log("ES.2", charactersNames);
 
 let femaleCharacters = [];
 
-console.log("ES.3step1", femaleCharacters);
+// console.log("ES.3step1", femaleCharacters);
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
   const character = starWarsCharacters[i];
@@ -138,7 +138,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   }
 }
 
-console.log("ES.3step2", femaleCharacters);
+console.log("ES.3", femaleCharacters);
 
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia le seguenti proprietà: blue, yellow, brown, red, blue-gray.
@@ -264,3 +264,86 @@ console.log("ES.9", charactersNames);
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+
+const randomNumber = Math.floor(Math.random() * starWarsCharacters.length);
+
+// console.log("ES.10step1", randomNumber);
+
+const character = starWarsCharacters[randomNumber];
+
+// console.log("ES.10step2", character.name);
+
+const characterNumber = randomNumber + 1;
+
+// console.log("ES.10step3", characterNumber);
+
+const maleCharacterDescription =
+  "CHARACTER NUMBER " +
+  characterNumber +
+  " : The name of this character is " +
+  character.name +
+  ". He is " +
+  character.height +
+  " cm tall and weight " +
+  character.mass +
+  " kg. He has " +
+  character.hair_color +
+  " hair, his skin is " +
+  character.skin_color +
+  " and his eyes are " +
+  character.eye_color +
+  ". He was born in the year " +
+  character.birth_year +
+  ".";
+
+const femaleCharacterDescription =
+  "CHARACTER NUMBER " +
+  characterNumber +
+  " : The name of this character is " +
+  character.name +
+  ". She is " +
+  character.height +
+  " cm tall and weight " +
+  character.mass +
+  " kg. She has " +
+  character.hair_color +
+  " hair, her skin is " +
+  character.skin_color +
+  " and her eyes are " +
+  character.eye_color +
+  ". She was born in the year " +
+  character.birth_year +
+  ".";
+
+const robotCharacterDescription =
+  "CHARACTER NUMBER " +
+  characterNumber +
+  " : The name of this character is " +
+  character.name +
+  ". It is " +
+  character.height +
+  " cm tall and weight " +
+  character.mass +
+  " kg. It has " +
+  character.hair_color +
+  " hair, its skin is " +
+  character.skin_color +
+  " and its eyes are " +
+  character.eye_color +
+  ". It was born in the year " +
+  character.birth_year +
+  ".";
+
+switch (character.gender) {
+  case "male":
+    console.log(maleCharacterDescription);
+    break;
+
+  case "female":
+    console.log(femaleCharacterDescription);
+    break;
+
+  case "robot":
+    console.log(robotCharacterDescription);
+    break;
+}
