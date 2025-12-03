@@ -161,6 +161,34 @@ console.log("ES.4", eyeColor);
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
+for (i = 0; i < starWarsCharacters.length; i++) {
+  const character = starWarsCharacters[i];
+
+  switch (character.eye_color) {
+    case "blue":
+      eyeColor.blue.push(character);
+      break;
+
+    case "yellow":
+      eyeColor.yellow.push(character);
+      break;
+
+    case "brown":
+      eyeColor.brown.push(character);
+      break;
+
+    case "red":
+      eyeColor.red.push(character);
+      break;
+
+    case "blue-gray":
+      eyeColor["blue-gray"].push(character);
+      break;
+  }
+}
+
+console.log("ES.5", eyeColor);
+
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
