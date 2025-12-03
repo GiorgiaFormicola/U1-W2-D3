@@ -215,15 +215,15 @@ console.log("ES.6", crewMass);
 */
 
 if (crewMass < 500) {
-  console.log("Ship is under loaded");
+  console.log("ES.7", "Ship is under loaded");
 } else if (crewMass >= 500 && crewMass <= 700) {
-  console.log("Ship is half loaded");
+  console.log("ES.7", "Ship is half loaded");
 } else if (crewMass > 700 && crewMass <= 900) {
-  console.log("Warning: Load is over 700");
+  console.log("ES.7", "Warning: Load is over 700");
 } else if (crewMass > 900 && crewMass <= 1000) {
-  console.log("Critical Load: Over 900");
+  console.log("ES.7", "Critical Load: Over 900");
 } else {
-  console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
+  console.log("ES.7", "DANGER! OVERLOAD ALERT: escape from ship now!");
 }
 
 /* ESERCIZIO 8
@@ -336,14 +336,14 @@ const robotCharacterDescription =
 
 switch (character.gender) {
   case "male":
-    console.log(maleCharacterDescription);
+    console.log("ES.10", maleCharacterDescription);
     break;
 
   case "female":
-    console.log(femaleCharacterDescription);
+    console.log("ES.10", femaleCharacterDescription);
     break;
 
   case "robot":
-    console.log(robotCharacterDescription);
+    console.log("ES.10", robotCharacterDescription);
     break;
 }
