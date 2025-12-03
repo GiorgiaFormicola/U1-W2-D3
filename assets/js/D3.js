@@ -115,7 +115,7 @@ console.log("ES.1", charactersNames);
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
 
-for (i = 0; i < starWarsCharacters.length; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   const character = starWarsCharacters[i];
   charactersNames.push(character.name);
 }
@@ -130,12 +130,11 @@ let femaleCharacters = [];
 
 console.log("ES.3step1", femaleCharacters);
 
-for (i = 0; i < starWarsCharacters.length; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   const character = starWarsCharacters[i];
 
-  switch (character.gender) {
-    case "female":
-      femaleCharacters.push(character);
+  if (character.gender === "female") {
+    femaleCharacters.push(character);
   }
 }
 
@@ -161,7 +160,7 @@ console.log("ES.4", eyeColor);
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
-for (i = 0; i < starWarsCharacters.length; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   const character = starWarsCharacters[i];
 
   switch (character.eye_color) {
@@ -193,24 +192,15 @@ console.log("ES.5", eyeColor);
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
 
-let charactersMass = [];
-
-for (i = 0; i < starWarsCharacters.length; i++) {
-  const character = starWarsCharacters[i];
-  charactersMass.push(character.mass);
-}
-
-console.log("ES.6step1", charactersMass);
-
 let crewMass = 0;
 let counter = 0;
 
 while (counter < starWarsCharacters.length) {
-  crewMass = crewMass + charactersMass[counter];
+  crewMass = crewMass + starWarsCharacters[counter].mass;
   counter++;
 }
 
-console.log("ES.6step2", crewMass);
+console.log("ES.6", crewMass);
 
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
@@ -240,12 +230,11 @@ if (crewMass < 500) {
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
 
-for (i = 0; i < starWarsCharacters.length; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   const character = starWarsCharacters[i];
 
-  switch (character.gender) {
-    case "n/a":
-      character.gender = "robot";
+  if (character.gender === "n/a") {
+    character.gender = "robot";
   }
 }
 
